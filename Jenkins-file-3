@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('git-clone'){
      steps{
-      checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_id', url: 'https://github.com/jenkinsserver1/multi-branch-para.git']]])
+       checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_id', url: 'https://github.com/jenkinsserver1/multi-branch-para.git']]])
      } 
     }
     stage('actions1 and actions2'){
